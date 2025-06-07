@@ -15,7 +15,7 @@ const HomePages = () => {
       <div className={styles.container_wraper}>
         <div className="flex flex-col">
           <div className="text-3xl lg:text-5xl text-gray-800 font-semibold mx-4 sm:mx-0 sm:py-0">
-            <article className="flex justify-center sm:justify-start gap-2 lg:gap-6 italic border-1 border-gray-300 lg:p-6 rounded-md">
+            <article className="flex justify-center sm:justify-start gap-2 lg:gap-6 italic border-1 border-gray-300 px-2 py-4 lg:p-6 rounded-md">
               <span className="mx-3 sm:mx-0 text-3xl mt-4 lg:text-5xl animate-bounce duration-75 hover:scale-110">
                 👋
               </span>
