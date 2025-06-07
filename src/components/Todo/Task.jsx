@@ -5,13 +5,13 @@ import { LiaSkullCrossbonesSolid } from "react-icons/lia";
 const Task = (props) => {
   return (
     <div className="flex flex-col">
-      <div className="flex justify-between items-center rounded-sm p-4">
+      <div className="flex justify-between items-center rounded-sm p-0">
         <article className="p-3">
-          <div className="flex gap-3">
-            <p className="text-gray-700 antialiased font-semibold text-xl">
-              [ TASK {props.id + 1} ]
+          <div className="flex gap-3 items-center">
+            <p className="text-gray-700 antialiased font-semibold">
+              [ {props.id + 1} ]
             </p>
-            <p className="text-gray-600 antialiased font-semibold text-xl">
+            <p className="text-gray-600 antialiased font-semibold text-sm">
               {props.item.title}
             </p>
           </div>
