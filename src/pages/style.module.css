@@ -2,6 +2,6 @@
 
 @layer components {
   .container_wraper {
-    @apply container mx-auto my-12;
+    @apply container py-10 sm:py-0 lg:py-16 space-y-8 md:space-y-18 mx-auto;
   }
 }

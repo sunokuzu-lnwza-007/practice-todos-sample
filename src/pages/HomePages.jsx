@@ -1,41 +1,53 @@
+import { useState } from "react";
 import AddTask from "../components/Todo/AddTask";
 import styles from "./style.module.css";
 import { SiGithub } from "react-icons/si";
+import Task from "../components/Todo/Task";
 
 const HomePages = () => {
+  const [todos, setTodo] = useState([]);
+
+  const newTask = (task) => {
+    setTodo((prev) => [...prev, task]);
+    console.log(todos);
+  };
   return (
     <>
       <div className={styles.container_wraper}>
-        <div className="flex-col my-16 sm:my-24 justify-center place-items-center">
-          <p className="flex text-2xl sm:text-5xl text-gray-800 italic font-semibold gap-3">
-            <span>👋</span> สวัสดีทุกคนครับ{" "}
-            <a target="_blank" href="https://github.com/sunokuzu-lnwza-007">
-              <SiGithub className="cursor-pointer hover:scale-110" />
-            </a>
-          </p>
-          <p className="text-sm sm:text-2xl text-gray-600 py-2 sm:py-5">
-            ฝึกการใช้{" "}
-            <a
-              target="_blank"
-              href="https://react.dev/"
-              className="text-blue-400 hover:text-blue-500 font-semibold cursor-pointer"
-            >
-              React 19
-            </a>{" "}
-            -{" "}
-            <a
-              target="_blank"
-              href="https://react.dev/"
-              className="text-sky-400 hover:text-sky-500 font-semibold cursor-pointer"
-            >
-              Tailwind 14
-            </a>
-          </p>
-          <p className="text-sm sm:text-2xl text-gray-600">
-            เว็ปไซต์นี้จัดทำขึ้นมาเพื่อการเรียนรู้เพียงอย่างเดียวครับ
-          </p>
+        <div className="flex flex-col">
+          <div className="text-3xl lg:text-5xl text-gray-800 font-semibold mx-4 sm:mx-0 py-4 sm:py-0">
+            <article className="flex gap-2 lg:gap-6 italic border-1 border-gray-300 lg:p-6 rounded-md">
+              <span className="mx-3 sm:mx-0 text-3xl mt-4 lg:text-5xl hover:animate-bounce duration-75 hover:scale-110">
+                👋
+              </span>
+              <span className="mx-3 sm:mx-0">
+                Hello there <br /> สวัสดีทุกคนครับ
+              </span>
+            </article>
+            <div className="bg-neutral-200 p-4 lg:p-0 text-center text-xl sm:text-4xl text-gray-700 mt-16 sm:mt-18 sm:mx-6 mx-3 antialiased italic lg:py-10">
+              <p>
+                " นี่คือ เว็ปไซต์ ฝึกฝนการใช้{" "}
+                <a
+                  target="_blank"
+                  href="https://react.dev/"
+                  className="text-blue-400 hover:text-blue-500 font-semibold"
+                >
+                  React 19
+                </a>{" "}
+                <span className="text-sky-400">-</span>{" "}
+                <a
+                  target="_blank"
+                  href="https://tailwindcss.com/"
+                  className="text-sky-400 hover:text-sky-500 font-semibold"
+                >
+                  Tailwind 3.4 "
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
-        <AddTask />
+
+        <AddTask newTask={newTask} />
       </div>
     </>
   );
