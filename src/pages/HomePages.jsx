@@ -23,7 +23,7 @@ const HomePages = () => {
                 Hello there <br /> สวัสดีทุกคนครับ
               </span>
             </article>
-            <div className="bg-neutral-200 shadow-xl p-4 mb-2 lg:p-0 text-center text-lg sm:text-4xl text-gray-700 mt-8 sm:mt-18 sm:mx-6 mx-3 antialiased italic lg:py-10">
+            <div className="bg-gradient-to-l to-neutral-150 from-neutral-200 shadow-xl p-4 mb-2 lg:p-0 text-center text-lg sm:text-4xl text-gray-700 mt-8 sm:mt-18 sm:mx-6 mx-3 antialiased italic lg:py-10">
               <p>
                 " นี่คือ เว็ปไซต์ ฝึกฝนการใช้{" "}
                 <a
@@ -47,7 +47,11 @@ const HomePages = () => {
         </div>
 
         <AddTask newTask={newTask} />
-        <Task />
+        <div className="max-w-6xl mx-3 lg:mx-auto pt-0">
+          {todos.map((item, i) => (
+            <Task item={item} key={i} id={i} />
+          ))}
+        </div>
       </div>
     </>
   );

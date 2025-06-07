@@ -1,15 +1,13 @@
 const Footer = () => {
   return (
-    <footer className="flex gap-2 select-none uppercase text-gray-300 justify-center p-3 text-xs lg:text-md">
-      <p>Buitl / Design</p>{" "}
-      <span>
-        <a
-          target="_blank"
-          className="hover:text-gray-500 hover:font-semibold duration-100"
-          href="https://github.com/sunokuzu-lnwza-007"
-        >
-          @Sunokuzu-lnwza
-        </a>
+    <footer className="text-center text-xs text-gray-500 p-3">
+      Designed & Built by{" "}
+      <span className="text-blue-300 hover:text-blue-400 font-semibold">
+        <a href="">Sunokuzu-lnwza</a>
+      </span>{" "}
+      —
+      <span className="italic">
+        a Dev who codes layouts like they're beats.
       </span>
     </footer>
   );

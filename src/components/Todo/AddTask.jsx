@@ -9,6 +9,7 @@ const AddTask = ({ newTask }) => {
     const task = {
       title: title.current.value,
       date: new Date().toLocaleDateString(),
+      time: new Date().toLocaleTimeString(),
     };
     newTask(task); // ส่ง task ออกไปให้ parent component
 
@@ -16,7 +17,7 @@ const AddTask = ({ newTask }) => {
   };
 
   return (
-    <div className="max-w-3xl py-2 lg:mt-4">
+    <div className="max-w-3xl py-8">
       <form
         className="px-5 text-center sm:text-start"
         ref={form}
@@ -43,9 +44,9 @@ const AddTask = ({ newTask }) => {
           />
           <button
             type="submit"
-            className="w-40 py-2 sm:py-2 font-semibold bg-gradient-to-l from-gray-600 to-gray-800 rounded text-white cursor-pointer hover:opacity-90"
+            className="w-40 py-2 sm:py-2 font-semibold bg-gradient-to-l from-gray-500 to-gray-800 rounded text-white cursor-pointer hover:opacity-90"
           >
-            Add Task
+            +
           </button>
         </div>
       </form>
