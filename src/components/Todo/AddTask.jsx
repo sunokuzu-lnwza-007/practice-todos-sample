@@ -16,7 +16,7 @@ const AddTask = ({ newTask }) => {
   };
 
   return (
-    <div className="max-w-3xl">
+    <div className="max-w-3xl py-2 lg:mt-4">
       <form
         className="px-5 text-center sm:text-start"
         ref={form}
@@ -26,7 +26,7 @@ const AddTask = ({ newTask }) => {
           htmlFor="title"
           className="text-lg italic sm:text-4xl text-gray-800 font-bold"
         >
-          <span> ✏️ </span> Typing Your Task{" "}
+          <span> 📘 </span> Typing Your Task{" "}
         </label>
         <span className="text-xs sm:text-lg text-gray-500">
           , (เพิ่มสิ่งที่คุณต้องการจะทำ)

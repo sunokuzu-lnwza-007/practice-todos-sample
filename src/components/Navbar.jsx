@@ -1,5 +1,4 @@
 import { Link, NavLink } from "react-router-dom";
-import { LuListTodo } from "react-icons/lu";
 
 const Navbar = () => {
   const activeLink = ({ isActive }) =>
@@ -8,7 +7,7 @@ const Navbar = () => {
       : "hover:text-gray-600";
 
   return (
-    <nav className="shadow-lg bg-neutral-100 py-6">
+    <nav className="shadow-lg bg-neutral-100 py-8 sm:py-6">
       <div className="container mx-auto sm:flex place-items-center gap-x-6 justify-center sm:place-items-start sm:justify-start">
         <Link to="/">
           <span className="flex items-center gap-2 font-bold text-4xl text-gray-800">

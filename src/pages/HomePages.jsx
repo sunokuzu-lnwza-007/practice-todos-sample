@@ -1,7 +1,6 @@
 import { useState } from "react";
 import AddTask from "../components/Todo/AddTask";
 import styles from "./style.module.css";
-import { SiGithub } from "react-icons/si";
 import Task from "../components/Todo/Task";
 
 const HomePages = () => {
@@ -15,8 +14,8 @@ const HomePages = () => {
     <>
       <div className={styles.container_wraper}>
         <div className="flex flex-col">
-          <div className="text-3xl lg:text-5xl text-gray-800 font-semibold mx-4 sm:mx-0 py-4 sm:py-0">
-            <article className="flex gap-2 lg:gap-6 italic border-1 border-gray-300 lg:p-6 rounded-md">
+          <div className="text-3xl lg:text-5xl text-gray-800 font-semibold mx-4 sm:mx-0 sm:py-0">
+            <article className="flex justify-center sm:justify-start gap-2 lg:gap-6 italic border-1 border-gray-300 lg:p-6 rounded-md">
               <span className="mx-3 sm:mx-0 text-3xl mt-4 lg:text-5xl hover:animate-bounce duration-75 hover:scale-110">
                 👋
               </span>
@@ -24,7 +23,7 @@ const HomePages = () => {
                 Hello there <br /> สวัสดีทุกคนครับ
               </span>
             </article>
-            <div className="bg-neutral-200 p-4 lg:p-0 text-center text-xl sm:text-4xl text-gray-700 mt-16 sm:mt-18 sm:mx-6 mx-3 antialiased italic lg:py-10">
+            <div className="bg-neutral-200 shadow-xl p-4 mb-2 lg:p-0 text-center text-lg sm:text-4xl text-gray-700 mt-8 sm:mt-18 sm:mx-6 mx-3 antialiased italic lg:py-10">
               <p>
                 " นี่คือ เว็ปไซต์ ฝึกฝนการใช้{" "}
                 <a
@@ -48,6 +47,7 @@ const HomePages = () => {
         </div>
 
         <AddTask newTask={newTask} />
+        <Task />
       </div>
     </>
   );
